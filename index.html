@@ -14,14 +14,43 @@
         font-family: 'Roboto',sans-serif;
         display:block;
         margin: auto;
-        background-color: #959da3;
-          }
+        background: url(https://i.pinimg.com/originals/ee/e0/c1/eee0c1dc806da44930fc6eb26b94a737.gif);
+        background-size: 100% 120%;
+        background-repeat: no repeat;
+        background-attachment: fixed;
+                }
         .button{
             text-decoration: rgb(255, 255, 255);
             display: block;
             margin: auto;
             position: center;
+            background-color: #6b3b41;
+            height: 400%;
         }
+
+        form{
+            background-color: #3b2124;
+            padding: 80px 40px; 
+            min-height: 500px    
+        }
+
+     .locator{
+    background-color: #6b3b41; 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+    .mynavbar{
+      position: center;
+    
+    }
+
+    .laptops{
+        text-align: left;   
+    font-size: 14px;     
+    padding-left: 15px;  
+    color: #6c757d;
+    }
+    
     </style>
   
 
@@ -30,55 +59,75 @@
 <body>
 
 
-            <nav class="navbar navbar-expand-lg" style="background-color: #515559">
+            <nav class="navbar navbar-expand-lg" style="background-color: #6b3b41">
         <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="mynavbar" class="text-light">Product Locator
+            <div class="collapse navbar-collapse navbar-brand" id="mynavbar" class="text-light">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link">Shop</a>
+                        <a class="nav-link px-2 text-light" href="">Shop</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link">Locate</a>
+                        <a class="nav-link px-2 text-light" href="">Locate</a>
                     </li>
                 </ul>
 
-                <form class="d-flex">
+                <div class="navbar-brand mx-auto bg-light rounded-5 navbar-brand bg-white px-4 py-1 fw-bold;" style="color: #49272b;"><b>Product Locator</b></div>
+
+    
+           
+
+                <nav class="d-flex">
                         <input class="form-control me-2" type="text" placeholder="Search">
                         <button class="btn btn-dark" type="button">Search</button>
-                        <button type="button" class="btn btn-suce+ces" onclick="window.location.reload()">Refresh</button>
+                        <button type="button" class="btn btn-danger" onclick="window.location.reload()">Refresh</button>
                     </form>
             </div>
         </div>
     </nav>
         
 
-        
-    <div class="container bg-dark text-dark min-vh-40 py-5 mt-3 rounded-5 bg-opacity-75" id="form">
-  <p class="fw-bold display-3 bg-light text-dark text-center rounded-5"><i>Find the right laptop</i></p>
-        <details class="ontoggle">
+   <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 locator p-5 text-center">  
+                <h3 class="bg-white rounded-5" style="color: #49272b;">Looking for a laptop? 💻</h3>
+    <details class="ontoggle text-light">
         <summary>Instructions:</summary>
         <p id="instructions"></p>
     </details>
-    <form>
-        <label>Enter Budget</label>
-            <input type="budget" id="" class="form-control">
-            <br>
-        
-        <button type="Submit" class="btn btn-success" onmouseover="plus()">Calculate</button>  
-    </form>
-    
-    <script> 
-        function plus (){
-            var price = document.getElementById ("budget").value;
-            var 
-                
-                document.write("The sum is: " + sum);
-                document.getElementById('instructions').innerHTML = "Enter your budget and find the right laptop for you!";
-        }
-        document.getElementById('instructions').innerHTML = "Enter your budget and find the right laptop for you!";
-    </script>
+        <p id="Enter your budget and let's find the right one for you!"></p>
+                <input type="text" class="form-control form-control-lg mb-3" id="laptopbudget" placeholder="Enter budget..">      
 
-  
+        <button type="Submit" class="btn btn-danger w-100 h-10" onclick="calculate()">Calculate</button>  
+        <span id="result">0.00</span></p>
+   </div>
+   
+
+   </div>
+   </div>
+
+
+ 
+
+
+<script>
+
+    function calculate() {
+        
+        var budget = document.getElementById ("laptopbudget").value;    
+        var discountedprice = budget * 0.15;      
+        var finalPrice = budget - discountedprice;  
+        document.getElementById("result").innerHTML =   "<br><p style='color: #3b2124;'> Your price will now be: P" + finalPrice.toFixed(2);        
+      document.getElementById('instructions').innerHTML = "Enter your budget to get 15% off!";
+        }  
+    
+        
+            document.getElementById("result").innerHTML = "<br><p style='color: #3b2124; fw-bold'> 0.00";
+            document.getElementById('instructions').innerHTML = "Enter your budget and let's find the right one for you!";
+        
+    
+</script>
+    
+   
 </body>
 </html>
