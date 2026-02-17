@@ -50,6 +50,14 @@
     padding-left: 15px;  
     color: #6c757d;
     }
+
+    #rec{
+        background-color: #6b3b41;  
+        width: 95%;      
+        max-width: 500px;  
+        height: 500px;     
+        margin: auto;
+    }
     
     </style>
   
@@ -102,12 +110,61 @@
         <span id="result">0.00</span></p>
    </div>
    
+   <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mt-3 rounded-3 p-3" id="rec" style="background-color: #6b3b41; min-height: 700px;">
+        <h4 class="bg-white rounded-5 text-center p-2 mb-4" style="color: #49272b;">Recommended Laptops</h4>
 
-   </div>
-   </div>
+        <div class="d-flex align-items-center mb-4">
+          <img src="https://i.pinimg.com/1200x/d9/aa/03/d9aa0386a4516140e168da2f300f9ec0.jpg" style="width: 120px; height: 120px;" class="rounded-2 me-3">
+          <p class="text-light mb-0"><b>The ASUS Vivobook</b> series offers versatile, stylish, and portable laptops.</p>
+        </div>
+
+        <div class="d-flex align-items-center mb-4">
+          <img src="https://i.pinimg.com/1200x/0c/8e/fa/0c8efa9a17f19a6dfa32743cc6431415.jpg" style="width: 120px; height: 120px;" class="rounded-2 me-3">
+          <p class="text-light mb-0"><b>The HP Victus</b> is a budget-to-midrange gaming laptop series known for strong performance.</p>
+        </div>
+
+        <div class="d-flex align-items-center mb-4">
+          <img src="https://i.pinimg.com/1200x/16/ae/9f/16ae9fed959361127b70de32c913ff02.jpg" style="width: 120px; height: 120px;" class="rounded-2 me-3">
+          <p class="text-light mb-0"><b>The Lenovo Series</b> offers several distinct laptop series catering to different user needs.</p>
+        </div>
+
+        
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mt-3 rounded-3 p-3" style="background-color: #6b3b41; min-height: 700px;">
+        <h4 class="bg-white rounded-5 text-center p-2 mb-4" style="color: #49272b;">Laptop Shops</h4>
+
+        <div class="d-flex align-items-center mb-4">
+          <img src="https://d3up48wss6lvj.cloudfront.net/data/uploads/2020/07/VILLMAN.jpg" style="width: 120px; height: 120px;" class="rounded-2 me-3">
+          <p class="text-light mb-0"><b>VillMan Computer</b> is a leading provider of computer products and laptop solutions in the Philippines located at San Juan, Metro Manila, and Marikina city.</p>
+<br><br>
+        </div>
+        <div class="d-flex align-items-center mb-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5JATQmw_5VAGifBNqjIz6WO0E36Qu579K3Q&s" style="width: 120px; height: 120px;" class="rounded-2 me-3">
+          <p class="text-light mb-0"><b>PC Express</b> is a leading computer and technology retailer in the Philippines, offering a wide range of products both in physical stores nationwide and through its online platforms.</p>
+
+        </div>
+        <div class="d-flex align-items-center mb-4">
+          <img src="https://mms.img.susercontent.com/6b8df101884325f904f290553b885173" style="width: 120px; height: 120px;" class="rounded-2 me-3">
+          <p class="text-light mb-0"><b>Silicon Valley</b> operates a vast network of branches across the country, primarily located within major shopping malls like SM Supermalls, Ayala Malls, and Robinsons Malls.</p>
+        </div>
+        
+         <div class="d-flex align-items-center mb-4">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYopAKJY5SF0-6uLxEOFJ8Y2lVW2_bnkd4g&s" style="width: 120px; height: 120px;" class="rounded-2 me-3">
+          <p class="text-light mb-0"><b>GigaHertz</b> operates 45 physical locations across the Philippines, primarily within major malls such as SM North EDSA, SM Megamall, SM Mall of Asia, and Glorietta.</p>
+        
+      </div>
+      
+    </div>
+  </div> </div> ```
 
 
- 
+
 
 
 <script>
@@ -117,12 +174,12 @@
         var budget = document.getElementById ("laptopbudget").value;    
         var discountedprice = budget * 0.15;      
         var finalPrice = budget - discountedprice;  
-        document.getElementById("result").innerHTML =   "<br><p style='color: #3b2124;'> Your price will now be: P" + finalPrice.toFixed(2);        
+        document.getElementById("result").innerHTML =   "<br><p class='text-light fw-bold'> Your price will now be: P" + finalPrice.toFixed(2);        
       document.getElementById('instructions').innerHTML = "Enter your budget to get 15% off!";
         }  
     
         
-            document.getElementById("result").innerHTML = "<br><p style='color: #3b2124; fw-bold'> 0.00";
+            document.getElementById("result").innerHTML = "<br><p class='text-light fw-bold'> 0.00";
             document.getElementById('instructions').innerHTML = "Enter your budget and let's find the right one for you!";
         
     
